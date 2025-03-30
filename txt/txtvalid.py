@@ -44,8 +44,15 @@ def get_data(rel_path: Path) -> Path:
         raise Exception(f"no {str(data_file)}")
     return data_file
 
-print(
-    parse_data_from_file(
-        get_data(Path("txt_chat.txt"))
+def txtvalid(print: bool=False):
+    res = (
+        parse_data_from_file(
+            get_data(Path("txt_chat.txt"))
+        )
     )
-)
+    if print:
+        return res
+    return
+
+if __name__ == "__main__":
+    txtvalid(print=True)

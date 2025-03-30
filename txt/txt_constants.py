@@ -1,5 +1,6 @@
 # pyright: strict
 
+from typing import Sequence
 from enum import StrEnum
 
 class Name(StrEnum):
@@ -11,7 +12,7 @@ class Name(StrEnum):
     JAMES = "james"
     BERTIE = "bertie"
 
-PROFILES = {
+PROFILES: dict[Name, Sequence[str]] = {
     Name.ESCOTT: (
         "escott", 
         "es", 
